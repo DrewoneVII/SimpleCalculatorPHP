@@ -1,0 +1,93 @@
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url('../img/image4.png');
+	background-size: cover;
+}
+/*Aligned to the center of the page using display-flex and other parameters, indicating a maximum extension of 100vh*/
+
+.content h2{
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	font-size: 26px;
+	color: black;
+	margin-left: 30px;
+/* Made style parameters for h2 which is outside the parent block */
+}
+.form{
+	width: 300px;
+	padding: 32px;
+	border-radius: 10px;
+	box-shadow: 0 4px 16px #ccc;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+}
+/* For form set width, padding, shadow using box-shadow, etc. .. */
+.form_input,
+.btn{
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	font-size: 16px;
+}
+/* Set the form_input and btn parameters */
+.form_title{
+	text-align: center;
+	margin: 0 0 32px 0;
+	font-weight: normal;
+}
+/* Specified h1 with class form_title relevant parameters */
+.form_group{
+	position: relative;
+	margin-bottom: 32px;
+}
+/* Parent containers with a div tag set postion indented */
+.form_label{
+	position: absolute;
+	width: 200px;
+	top: 0;
+	left: 1;
+	z-index: -1;
+	color: #9e9e9e;
+	transition: 0.3s;
+}
+/* Blamed our label using position-absolute, transition-0.3s for transition animation speed */
+.form_input{
+	width: 100%;
+	padding: 0 0 10px 0;
+	border:none;
+	border-bottom: 1px solid #e0e0e0;
+	background-color: transparent;
+	outline: none;
+	transition: 0.3s; 
+}
+/* inputu assigned the value width: 100%, removed the value of the border, made it underlined with the bottom using border-bottom */
+.btn{
+	padding: 10px 20px;
+	border:none;
+	bodred-radius: 5px;
+	color: #fff;
+	background-color:#0071f0; 
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s;
+	margin-bottom: 10px;
+}
+.btn:last-child{
+	margin-right: 45px;
+}
+/* Button modification */
+.btn:focus,
+.btn:hover {
+	background-color: rgba(0,113,240,0.7);
+}
+
+.form_input:focus ~ .form_label,
+.form_input:not(:placeholder-shown) ~ .form_label {
+	top:-18px;
+	font-size: 12px;
+	color: #e0e0e0;
+}
+/* Assigned the value of focus with the help of the sign ~ pointed to lable so that while clicking on the field to create an animation of the distance of the text */
+/* In order not to get the effect of text overlay created in html-input - placeholder for our two Input type = "text" now when you enter text, the value and names will not fit on each other */
